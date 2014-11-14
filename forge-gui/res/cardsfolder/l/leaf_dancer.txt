@@ -1,0 +1,7 @@
+Name:Leaf Dancer
+ManaCost:1 G G
+Types:Creature Centaur
+PT:2/2
+K:Forestwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/od/en-us/card29782.jpg
+Oracle:Forestwalk

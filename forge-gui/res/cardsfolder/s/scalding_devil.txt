@@ -1,0 +1,7 @@
+Name:Scalding Devil
+ManaCost:1 R
+Types:Creature Devil
+PT:1/1
+A:AB$ DealDamage | Cost$ 2 R | ValidTgts$ Player | TgtPrompt$ Select target player | NumDmg$ 1 | SpellDescription$ CARDNAME deals 1 damage to target player.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/scalding_devil.jpg
+Oracle:{2}{R}: Scalding Devil deals 1 damage to target player.

@@ -1,0 +1,7 @@
+Name:Guma
+ManaCost:2 R
+Types:Creature Cat
+PT:2/2
+K:Protection from blue
+SVar:Picture:http://www.wizards.com/global/images/magic/general/guma.jpg
+Oracle:Protection from blue

@@ -1,0 +1,7 @@
+Name:Crazed Goblin
+ManaCost:R
+Types:Creature Goblin Warrior
+PT:1/1
+K:CARDNAME attacks each turn if able.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/crazed_goblin.jpg
+Oracle:Crazed Goblin attacks each turn if able.

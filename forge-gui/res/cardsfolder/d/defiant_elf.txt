@@ -1,0 +1,7 @@
+Name:Defiant Elf
+ManaCost:G
+Types:Creature Elf
+PT:1/1
+K:Trample
+SVar:Picture:http://resources.wizards.com/magic/cards/lgn/en-us/card39707.jpg
+Oracle:Trample

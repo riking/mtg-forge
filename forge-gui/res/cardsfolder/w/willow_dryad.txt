@@ -1,0 +1,7 @@
+Name:Willow Dryad
+ManaCost:G
+Types:Creature Dryad
+PT:1/1
+K:Forestwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/po/en-us/card4325.jpg
+Oracle:Forestwalk

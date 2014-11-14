@@ -1,0 +1,10 @@
+Name:Martyr's Cry
+ManaCost:W W
+Types:Sorcery
+A:SP$ ChangeZoneAll | Cost$ W W | Origin$ Battlefield | Destination$ Exile | RememberLKI$ True | ChangeType$ Creature.White | SubAbility$ DBRepeat | SpellDescription$ Exile all white creatures. For each creature exiled this way, its controller draws a card.
+SVar:DBRepeat:DB$ RepeatEach | DefinedCards$ DirectRemembered | UseImprinted$ True | RepeatSubAbility$ DBDraw | SubAbility$ DBCleanup
+SVar:DBDraw:DB$ Draw | Defined$ ImprintedController | NumCards$ 1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/martyrs_cry.jpg
+Oracle:Exile all white creatures. For each creature exiled this way, its controller draws a card.

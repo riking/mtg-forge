@@ -1,0 +1,7 @@
+Name:Zodiac Rabbit
+ManaCost:G
+Types:Creature Rabbit
+PT:1/1
+K:Forestwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/pk/en-us/card10582.jpg
+Oracle:Forestwalk

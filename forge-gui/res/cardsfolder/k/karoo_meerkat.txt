@@ -1,0 +1,7 @@
+Name:Karoo Meerkat
+ManaCost:1 G
+Types:Creature Mongoose
+PT:2/1
+K:Protection from blue
+SVar:Picture:http://www.wizards.com/global/images/magic/general/karoo_meerkat.jpg
+Oracle:Protection from blue

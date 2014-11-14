@@ -1,0 +1,7 @@
+Name:Dread Warlock
+ManaCost:1 B B
+Types:Creature Human Wizard
+PT:2/2
+K:CantBeBlockedBy Creature.nonBlack
+SVar:Picture:http://www.wizards.com/global/images/magic/general/dread_warlock.jpg
+Oracle:Dread Warlock can't be blocked except by black creatures.

@@ -1,0 +1,7 @@
+Name:Stormfront Pegasus
+ManaCost:1 W
+Types:Creature Pegasus
+PT:2/1
+K:Flying
+SVar:Picture:http://www.wizards.com/global/images/magic/general/stormfront_pegasus.jpg
+Oracle:Flying

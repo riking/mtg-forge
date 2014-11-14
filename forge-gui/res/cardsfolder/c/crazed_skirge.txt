@@ -1,0 +1,8 @@
+Name:Crazed Skirge
+ManaCost:3 B
+Types:Creature Imp
+PT:2/2
+K:Flying
+K:Haste
+SVar:Picture:http://resources.wizards.com/magic/cards/uz/en-us/card5555.jpg
+Oracle:Flying, haste

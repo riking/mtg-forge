@@ -1,0 +1,9 @@
+Name:Skeletal Kathari
+ManaCost:4 B
+Types:Creature Bird Skeleton
+PT:3/2
+K:Flying
+A:AB$ Regenerate | Cost$ B Sac<1/Creature> | SpellDescription$ Regenerate CARDNAME.
+SVar:RemAIDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/skeletal_kathari.jpg
+Oracle:Flying\n{B}, Sacrifice a creature: Regenerate Skeletal Kathari.

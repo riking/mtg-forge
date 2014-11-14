@@ -1,0 +1,7 @@
+Name:Elven Riders
+ManaCost:3 G G
+Types:Creature Elf
+PT:3/3
+K:CantBeBlockedBy Creature.withoutFlying+nonWall
+SVar:Picture:http://www.wizards.com/global/images/magic/general/elven_riders.jpg
+Oracle:Elven Riders can't be blocked except by Walls and/or creatures with flying.

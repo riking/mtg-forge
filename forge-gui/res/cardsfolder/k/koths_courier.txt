@@ -1,0 +1,7 @@
+Name:Koth's Courier
+ManaCost:1 R R
+Types:Creature Human Rogue
+PT:2/3
+K:Forestwalk
+SVar:Picture:http://www.wizards.com/global/images/magic/general/koths_courier.jpg
+Oracle:Forestwalk

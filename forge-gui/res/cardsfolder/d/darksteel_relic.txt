@@ -1,0 +1,7 @@
+Name:Darksteel Relic
+ManaCost:0
+Types:Artifact
+K:Indestructible
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/darksteel_relic.jpg
+Oracle:Indestructible (Effects that say "destroy" don't destroy this artifact.)

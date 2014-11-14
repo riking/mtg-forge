@@ -1,0 +1,8 @@
+Name:Skyhunter Skirmisher
+ManaCost:1 W W
+Types:Creature Cat Knight
+PT:1/1
+K:Flying
+K:Double Strike
+SVar:Picture:http://www.wizards.com/global/images/magic/general/skyhunter_skirmisher.jpg
+Oracle:Flying, double strike (This creature can't be blocked except by creatures with flying or reach, and it deals both first-strike and regular combat damage.)

@@ -1,0 +1,8 @@
+Name:Fallen Angel
+ManaCost:3 B B
+Types:Creature Angel
+PT:3/3
+K:Flying
+A:AB$ Pump | Cost$ Sac<1/Creature> | NumAtt$ +2 | NumDef$ +1 | SpellDescription$ CARDNAME gets +2/+1 until end of turn.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/fallen_angel.jpg
+Oracle:Flying\nSacrifice a creature: Fallen Angel gets +2/+1 until end of turn.

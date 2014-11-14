@@ -1,0 +1,13 @@
+Name:Harvest Wurm
+ManaCost:1 G
+Types:Creature Wurm
+PT:3/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | TriggerDescription$ When CARDNAME enters the battlefield, sacrifice it unless you return a basic land card from your graveyard to your hand.
+SVar:TrigChangeZone:AB$ ChangeZone | Cost$ 0 | Origin$ Graveyard | Destination$ Hand | Hidden$ True | ChangeType$ Land.Basic+YouOwn | RememberChanged$ True | SubAbility$ DBSac
+SVar:DBSac:DB$ Sacrifice | Cost$ 0 | Defined$ Self | SubAbility$ DBCleanup | ConditionCheckSVar$ X | ConditionSVarCompare$ LT1 | References$ X
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount
+SVar:NeedsToPlayVar:Y GE1
+SVar:Y:Count$TypeInYourYard.Basic
+SVar:Picture:http://www.wizards.com/global/images/magic/general/harvest_wurm.jpg
+Oracle:When Harvest Wurm enters the battlefield, sacrifice it unless you return a basic land card from your graveyard to your hand.

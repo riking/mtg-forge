@@ -1,0 +1,8 @@
+Name:Magus of the Moat
+ManaCost:2 W W
+Types:Creature Human Wizard
+PT:0/3
+S:Mode$ Continuous | Affected$ Creature.withoutFlying | AddHiddenKeyword$ CARDNAME can't attack. | Description$ Creatures without flying can't attack.
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/magus_of_the_moat.jpg
+Oracle:Creatures without flying can't attack.

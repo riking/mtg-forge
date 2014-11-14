@@ -1,0 +1,5 @@
+Name:Snow-Covered Mountain
+ManaCost:no cost
+Types:Basic Snow Land Mountain
+SVar:Picture:http://www.wizards.com/global/images/magic/general/snow_covered_mountain.jpg
+Oracle:R

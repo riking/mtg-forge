@@ -1,0 +1,7 @@
+Name:Throne of Geth
+ManaCost:2
+Types:Artifact
+A:AB$ Proliferate | Cost$ T Sac<1/Artifact> | SpellDescription$ Proliferate
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/throne_of_geth.jpg
+Oracle:{T}, Sacrifice an artifact: Proliferate. (You choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)

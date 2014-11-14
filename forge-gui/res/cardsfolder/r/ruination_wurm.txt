@@ -1,0 +1,6 @@
+Name:Ruination Wurm
+ManaCost:4 R G
+Types:Creature Wurm
+PT:7/6
+SVar:Picture:http://www.wizards.com/global/images/magic/general/ruination_wurm.jpg
+Oracle:

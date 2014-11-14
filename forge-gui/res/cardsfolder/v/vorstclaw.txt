@@ -1,0 +1,6 @@
+Name:Vorstclaw
+ManaCost:4 G G
+Types:Creature Elemental Horror
+PT:7/7
+SVar:Picture:http://www.wizards.com/global/images/magic/general/vorstclaw.jpg
+Oracle:

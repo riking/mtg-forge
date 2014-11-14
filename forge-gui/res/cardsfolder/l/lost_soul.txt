@@ -1,0 +1,7 @@
+Name:Lost Soul
+ManaCost:1 B B
+Types:Creature Spirit Minion
+PT:2/1
+K:Swampwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/6e/en-us/card20178.jpg
+Oracle:Swampwalk

@@ -1,0 +1,21 @@
+Name:Nezumi Graverobber
+ManaCost:1 B
+Types:Creature Rat Rogue
+PT:2/1
+A:AB$ ChangeZone | Cost$ 1 B | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.OppOwn | SubAbility$ DBFlip | SpellDescription$ Exile target card from an opponent's graveyard. If no cards are in that graveyard, flip CARDNAME.
+SVar:DBFlip:DB$SetState | Defined$ Self | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0 | References$ X | Mode$ Flip
+SVar:X:Count$InOppYard
+AlternateMode:Flip
+SVar:Picture:http://www.wizards.com/global/images/magic/general/nezumi_graverobber.jpg
+Oracle:{1}{B}: Exile target card from an opponent's graveyard. If no cards are in that graveyard, flip Nezumi Graverobber.
+
+ALTERNATE
+
+Name:Nighteyes the Desecrator
+ManaCost:1 B
+Colors:black
+Types:Legendary Creature Rat Wizard
+PT:4/2
+A:AB$ ChangeZone | Cost$ 4 B | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature. | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/nighteyes_the_desecrator.jpg
+Oracle:{4}{B}: Put target creature card from a graveyard onto the battlefield under your control.

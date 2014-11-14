@@ -1,0 +1,14 @@
+Name:Court Hussar
+ManaCost:2 U
+Types:Creature Vedalken Knight
+PT:1/3
+K:Vigilance
+T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When CARDNAME enters the battlefield, look at the top three cards of your library, then put one of them into your hand and the rest on the bottom of your library in any order.
+T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | ManaNotSpent$ W | TriggerDescription$ When CARDNAME enters the battlefield, sacrifice it unless {W} was spent to cast it.
+SVar:TrigDig:AB$Dig | Cost$ 0 | DigNum$ 3 | Defined$ You
+SVar:TrigSac:AB$Sacrifice | Cost$ 0 | Defined$ Self
+SVar:ManaNeededToAvoidNegativeEffect:white
+SVar:RemRandomDeck:True
+DeckNeeds:Color$white
+SVar:Picture:http://www.wizards.com/global/images/magic/general/court_hussar.jpg
+Oracle:Vigilance\nWhen Court Hussar enters the battlefield, look at the top three cards of your library, then put one of them into your hand and the rest on the bottom of your library in any order.\nWhen Court Hussar enters the battlefield, sacrifice it unless {W} was spent to cast it.

@@ -1,0 +1,6 @@
+Name:Sinkhole
+ManaCost:B B
+Types:Sorcery
+A:SP$ Destroy | Cost$ B B | ValidTgts$ Land | TgtPrompt$ Select target land | SpellDescription$ Destroy target land.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/sinkhole.jpg
+Oracle:Destroy target land.

@@ -1,0 +1,7 @@
+Name:Lynx
+ManaCost:1 G
+Types:Creature Cat
+PT:2/1
+K:Forestwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/p3/en-us/card21053.jpg
+Oracle:Forestwalk

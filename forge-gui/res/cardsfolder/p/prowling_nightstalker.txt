@@ -1,0 +1,7 @@
+Name:Prowling Nightstalker
+ManaCost:3 B
+Types:Creature Nightstalker
+PT:2/2
+K:CantBeBlockedBy Creature.nonBlack
+SVar:Picture:http://www.wizards.com/global/images/magic/general/prowling_nightstalker.jpg
+Oracle:Prowling Nightstalker can't be blocked except by black creatures.

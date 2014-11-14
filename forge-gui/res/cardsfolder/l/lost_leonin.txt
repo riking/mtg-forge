@@ -1,0 +1,7 @@
+Name:Lost Leonin
+ManaCost:1 W
+Types:Creature Cat Soldier
+PT:2/1
+K:Infect
+SVar:Picture:http://www.wizards.com/global/images/magic/general/lost_leonin.jpg
+Oracle:Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)

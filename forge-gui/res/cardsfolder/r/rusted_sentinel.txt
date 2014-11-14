@@ -1,0 +1,7 @@
+Name:Rusted Sentinel
+ManaCost:4
+Types:Artifact Creature Golem
+PT:3/4
+K:CARDNAME enters the battlefield tapped.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/rusted_sentinel.jpg
+Oracle:Rusted Sentinel enters the battlefield tapped.

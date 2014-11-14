@@ -1,0 +1,12 @@
+Name:Glissa Sunseeker
+ManaCost:2 G G
+Types:Legendary Creature Elf
+PT:3/2
+K:First Strike
+A:AB$ Destroy | Cost$ T | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | ConditionCheckSVar$ Y | ConditionSVarCompare$ EQX | References$ X,Y | SpellDescription$ Destroy target artifact if its converted mana cost is equal to the amount of mana in your mana pool.
+SVar:X:Count$ManaPool:All
+SVar:Y:Targeted$CardManaCost
+#AI doesn't have a mana pool
+SVar:RemAIDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/glissa_sunseeker.jpg
+Oracle:First strike\n{T}: Destroy target artifact if its converted mana cost is equal to the amount of mana in your mana pool.

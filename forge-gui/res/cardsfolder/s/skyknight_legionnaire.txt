@@ -1,0 +1,8 @@
+Name:Skyknight Legionnaire
+ManaCost:1 R W
+Types:Creature Human Knight
+PT:2/2
+K:Flying
+K:Haste
+SVar:Picture:http://resources.wizards.com/magic/cards/rav/en-us/card109082.jpg
+Oracle:Flying, haste

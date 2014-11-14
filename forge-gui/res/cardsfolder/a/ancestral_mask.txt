@@ -1,0 +1,11 @@
+Name:Ancestral Mask
+ManaCost:2 G
+Types:Enchantment Aura
+K:Enchant creature
+A:SP$ Attach | Cost$ 2 G | ValidTgts$ Creature | AILogic$ Pump
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ X | AddToughness$ X | Description$ Enchanted creature gets +2/+2 for each other enchantment on the battlefield.
+SVar:X:Count$Valid Enchantment.Other/Times.2
+SVar:RemRandomDeck:True
+SVar:BuffedBy:Enchantment
+SVar:Picture:http://www.wizards.com/global/images/magic/general/ancestral_mask.jpg
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 for each other enchantment on the battlefield.

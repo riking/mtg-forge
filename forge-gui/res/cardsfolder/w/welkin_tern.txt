@@ -1,0 +1,8 @@
+Name:Welkin Tern
+ManaCost:1 U
+Types:Creature Bird
+PT:2/1
+K:Flying
+K:CARDNAME can block only creatures with flying.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/welkin_tern.jpg
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWelkin Tern can block only creatures with flying.

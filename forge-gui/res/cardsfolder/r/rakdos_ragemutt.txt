@@ -1,0 +1,8 @@
+Name:Rakdos Ragemutt
+ManaCost:3 B R
+Types:Creature Elemental Hound
+PT:3/3
+K:Haste
+K:Lifelink
+SVar:Picture:http://www.wizards.com/global/images/magic/general/rakdos_ragemutt.jpg
+Oracle:Lifelink, haste

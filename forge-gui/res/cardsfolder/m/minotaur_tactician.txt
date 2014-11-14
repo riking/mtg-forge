@@ -1,0 +1,13 @@
+Name:Minotaur Tactician
+ManaCost:3 R
+Types:Creature Minotaur
+PT:1/1
+K:Haste
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | SVarCompare$ GE1 | References$ X | Description$ CARDNAME gets +1/+1 as long as you control a white creature.
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ Y | SVarCompare$ GE1 | References$ Y | Description$ CARDNAME gets +1/+1 as long as you control a blue creature.
+SVar:X:Count$Valid Creature.YouCtrl+White
+SVar:Y:Count$Valid Creature.YouCtrl+Blue
+SVar:BuffedBy:Creature.White,Creature.Blue
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/minotaur_tactician.jpg
+Oracle:Haste\nMinotaur Tactician gets +1/+1 as long as you control a white creature.\nMinotaur Tactician gets +1/+1 as long as you control a blue creature.

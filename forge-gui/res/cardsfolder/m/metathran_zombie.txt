@@ -1,0 +1,9 @@
+Name:Metathran Zombie
+ManaCost:1 U
+Types:Creature Metathran Zombie
+PT:1/1
+A:AB$ Regenerate | Cost$ B | SpellDescription$ Regenerate CARDNAME.
+SVar:RemRandomDeck:True
+DeckNeeds:Color$Black
+SVar:Picture:http://www.wizards.com/global/images/magic/general/metathran_zombie.jpg
+Oracle:{B}: Regenerate Metathran Zombie.

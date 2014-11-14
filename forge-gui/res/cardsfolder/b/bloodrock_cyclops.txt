@@ -1,0 +1,7 @@
+Name:Bloodrock Cyclops
+ManaCost:2 R
+Types:Creature Cyclops
+PT:3/3
+K:CARDNAME attacks each turn if able.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/bloodrock_cyclops.jpg
+Oracle:Bloodrock Cyclops attacks each turn if able.

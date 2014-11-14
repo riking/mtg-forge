@@ -1,0 +1,9 @@
+Name:Armory Guard
+ManaCost:3 W
+Types:Creature Giant Soldier
+PT:2/5
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Vigilance | CheckSVar$ X | SVarCompare$ GE1 | Description$ CARDNAME has vigilance as long as you control a Gate.
+SVar:X:Count$Valid Gate.YouCtrl
+DeckHints:Type$Gate
+SVar:Picture:http://www.wizards.com/global/images/magic/general/armory_guard.jpg
+Oracle:Armory Guard has vigilance as long as you control a Gate.

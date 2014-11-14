@@ -1,0 +1,8 @@
+Name:Whirlwind Adept
+ManaCost:4 U
+Types:Creature Djinn Monk
+PT:4/2
+K:Hexproof
+K:Prowess
+SVar:Picture:http://www.wizards.com/global/images/magic/general/whirlwind_adept.jpg
+Oracle:Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)

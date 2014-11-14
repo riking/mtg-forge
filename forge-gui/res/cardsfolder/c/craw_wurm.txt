@@ -1,0 +1,6 @@
+Name:Craw Wurm
+ManaCost:4 G G
+Types:Creature Wurm
+PT:6/4
+SVar:Picture:http://resources.wizards.com/magic/cards/9ed/en-us/card83040.jpg
+Oracle:

@@ -1,0 +1,7 @@
+Name:Storm Shaman
+ManaCost:2 R
+Types:Creature Human Cleric Shaman
+PT:0/4
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/storm_shaman.jpg
+Oracle:{R}: Storm Shaman gets +1/+0 until end of turn.

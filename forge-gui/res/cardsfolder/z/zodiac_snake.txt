@@ -1,0 +1,7 @@
+Name:Zodiac Snake
+ManaCost:2 B
+Types:Creature Snake
+PT:2/2
+K:Swampwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/pk/en-us/card10608.jpg
+Oracle:Swampwalk

@@ -1,0 +1,11 @@
+Name:Words of Worship
+ManaCost:2 W
+Types:Enchantment
+A:AB$ Effect | Cost$ 1 | Name$ Words of Worship Effect | ReplacementEffects$ DrawReplace | SVars$ ExileEffect,WordLife | SpellDescription$ The next time you would draw a card this turn, you gain 5 life instead.
+SVar:DrawReplace:Event$ Draw | ValidPlayer$ You | ReplaceWith$ WordLife | Description$ The next time you would draw a card this turn, you gain 5 life instead.
+SVar:WordLife:AB$ GainLife | Cost$ 0 | LifeAmount$ 5 | SubAbility$ ExileEffect
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:RemRandomDeck:True
+SVar:RemAIDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/words_of_worship.jpg
+Oracle:{1}: The next time you would draw a card this turn, you gain 5 life instead.

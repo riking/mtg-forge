@@ -1,0 +1,9 @@
+Name:Vine Dryad
+ManaCost:3 G
+Types:Creature Dryad
+PT:1/3
+K:Flash
+K:Forestwalk
+SVar:AltCost:Cost$ ExileFromHand<1/Card.Green> | Description$ You may exile one green card from your hand rather than pay CARDNAME's mana cost.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/vine_dryad.jpg
+Oracle:Flash\nForestwalk\nYou may exile a green card from your hand rather than pay Vine Dryad's mana cost.

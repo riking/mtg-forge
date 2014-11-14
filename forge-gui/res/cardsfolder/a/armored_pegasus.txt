@@ -1,0 +1,7 @@
+Name:Armored Pegasus
+ManaCost:1 W
+Types:Creature Pegasus
+PT:1/2
+K:Flying
+SVar:Picture:http://resources.wizards.com/magic/cards/6e/en-us/card14469.jpg
+Oracle:Flying

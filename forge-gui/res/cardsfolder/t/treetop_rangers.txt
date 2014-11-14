@@ -1,0 +1,7 @@
+Name:Treetop Rangers
+ManaCost:2 G
+Types:Creature Elf
+PT:2/2
+K:CantBeBlockedBy Creature.withoutFlying
+SVar:Picture:http://www.wizards.com/global/images/magic/general/treetop_rangers.jpg
+Oracle:Treetop Rangers can't be blocked except by creatures with flying.

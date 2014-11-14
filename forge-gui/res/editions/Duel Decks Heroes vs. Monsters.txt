@@ -1,0 +1,89 @@
+[metadata]
+Code=DDL
+Alias=HVM
+Date=2013-09-06
+Name=Duel Decks: Heroes vs. Monsters
+Type=Duel_Decks
+
+[cards]
+R Anax and Cymede
+C Armory Guard
+C Auramancer
+U Battle Mastery
+U Beast Within
+C Blood Ogre
+C Bonds of Faith
+C Boros Guildgate
+C Cavalry Pegasus
+U Condemn
+R Conquering Manticore
+R Crater Hellion
+U Crowned Ceratok
+U Daily Regimen
+C Dawnstrike Paladin
+C Deadly Recluse
+U Destructive Revelry
+R Deus of Calamity
+U Dragon Blood
+U Fencing Ace
+R Figure of Destiny
+U Fires of Yavimaya
+L Forest
+L Forest
+L Forest
+L Forest
+C Freewind Equenaut
+C Ghor-Clan Savage
+C Gorehorn Minotaurs
+U Griffin Guide
+U Gustcloak Sentinel
+R Kamahl, Pit Fighter
+U Kavu Predator
+U Kazandu Refuge
+C Krosan Tusker
+U Llanowar Reborn
+U Magma Jet
+U Miraculous Recovery
+C Moment of Heroism
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+U New Benalia
+R Nobilis of War
+C Orcish Lumberjack
+U Ordeal of Purphoros
+C Pay No Heed
+L Plains
+L Plains
+L Plains
+L Plains
+M Polukranos, World Eater
+C Prey Upon
+U Pyroclasm
+U Pyrokinesis
+U Regrowth
+U Righteousness
+C Satyr Hedonist
+C Shower of Sparks
+U Skarrg, the Rage Pits
+R Skarrgan Firebird
+U Skarrgan Skybreaker
+C Smite the Monstrous
+C Somberwald Vigilante
+C Stand Firm
+U Stun Sniper
+M Sun Titan
+C Terrifying Presence
+C Thraben Valiant
+R Troll Ascetic
+U Truefire Paladin
+U Undying Rage
+C Valley Rannet
+C Volt Charge
+R Winds of Rath
+C Zhur-Taa Druid

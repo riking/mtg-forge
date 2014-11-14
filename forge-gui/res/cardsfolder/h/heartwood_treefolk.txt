@@ -1,0 +1,7 @@
+Name:Heartwood Treefolk
+ManaCost:2 G G
+Types:Creature Treefolk
+PT:3/4
+K:Forestwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/te/en-us/card4767.jpg
+Oracle:Forestwalk

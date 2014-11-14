@@ -1,0 +1,7 @@
+Name:Patchwork Gnomes
+ManaCost:3
+Types:Artifact Creature Gnome
+PT:2/1
+A:AB$ Regenerate | Cost$ Discard<1/Card> | SpellDescription$ Regenerate CARDNAME.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/patchwork_gnomes.jpg
+Oracle:Discard a card: Regenerate Patchwork Gnomes.

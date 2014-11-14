@@ -1,0 +1,10 @@
+Name:Crab Umbra
+ManaCost:U
+Types:Enchantment Aura
+K:Enchant creature
+K:Totem armor
+A:SP$ Attach | Cost$ U | ValidTgts$ Creature | AILogic$ Pump
+A:AB$ Untap | Cost$ 2 U | Defined$ Enchanted | SpellDescription$ Untap enchanted creature.
+SVar:NonStackingAttachEffect:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/crab_umbra.jpg
+Oracle:Enchant creature\n{2}{U}: Untap enchanted creature.\nTotem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)

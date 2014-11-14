@@ -1,0 +1,8 @@
+Name:Skyshroud Falcon
+ManaCost:1 W
+Types:Creature Bird
+PT:1/1
+K:Flying
+K:Vigilance
+SVar:Picture:http://resources.wizards.com/magic/cards/st/en-us/card5224.jpg
+Oracle:Flying, vigilance

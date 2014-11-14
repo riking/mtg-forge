@@ -1,0 +1,37 @@
+[duel]
+[metadata]
+Name=Dino 4
+Title=Dino
+Difficulty=very hard
+Description=Mono brown affinity deck with Affinity for artifacts, Metalcraft and Modular cards
+Icon=Dino.jpg
+Deck Type=constructed
+[main]
+1 Mox Emerald
+1 Mox Pearl
+1 Mox Jet
+1 Mox Ruby
+1 Mox Sapphire
+2 Mox Opal
+1 Sol Ring
+4 Darksteel Citadel
+2 Ancient Den
+2 Seat of the Synod
+2 Vault of Whispers
+2 Tree of Tales
+1 Great Furnace
+4 Frogmite
+1 Flayer Husk
+4 Ornithopter
+4 Memnite
+4 Etched Champion
+1 All Is Dust
+1 Arcbound Stinger
+4 Lodestone Golem
+3 Myr Enforcer
+3 Signal Pest
+3 Cranial Plating
+2 Arcbound Worker
+3 Skullclamp
+2 Arcbound Crusher
+[sideboard]

@@ -1,0 +1,372 @@
+package forge.screens.match.views;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.math.Vector2;
+
+import forge.Forge;
+import forge.Graphics;
+import forge.assets.FSkinColor;
+import forge.assets.FSkinFont;
+import forge.assets.TextRenderer;
+import forge.card.CardDetailUtil;
+import forge.card.CardRenderer;
+import forge.card.CardZoom;
+import forge.card.CardDetailUtil.DetailColors;
+import forge.card.CardRenderer.CardStackPosition;
+import forge.game.card.CardView;
+import forge.game.player.Player;
+import forge.game.player.PlayerView;
+import forge.game.spellability.StackItemView;
+import forge.game.zone.ZoneType;
+import forge.match.MatchUtil;
+import forge.menu.FCheckBoxMenuItem;
+import forge.menu.FDropDown;
+import forge.menu.FMenuItem;
+import forge.menu.FMenuTab;
+import forge.menu.FPopupMenu;
+import forge.player.PlayerControllerHuman;
+import forge.screens.match.MatchController;
+import forge.screens.match.TargetingOverlay;
+import forge.toolbox.FCardPanel;
+import forge.toolbox.FDisplayObject;
+import forge.toolbox.FEvent;
+import forge.toolbox.FEvent.FEventHandler;
+import forge.toolbox.FLabel;
+import forge.util.FCollectionView;
+import forge.util.Utils;
+
+public class VStack extends FDropDown {
+    public static final float CARD_WIDTH = Utils.AVG_FINGER_WIDTH;
+    public static final float CARD_HEIGHT = Math.round(CARD_WIDTH * FCardPanel.ASPECT_RATIO);
+    public static final float BORDER_THICKNESS = Utils.scale(2);
+    public static final float PADDING = Utils.scale(3);
+    public static final float MARGINS = Utils.scale(4);
+    private static final FSkinFont FONT = FSkinFont.get(11);
+    private static final float ALPHA_COMPOSITE = 0.5f;
+    private static final TextRenderer textRenderer = new TextRenderer(true);
+
+    private StackInstanceDisplay activeItem;
+    private StackItemView activeStackInstance;
+    private Map<PlayerView, Object> playersWithValidTargets;
+
+    private int stackSize;
+
+    public VStack() {
+    }
+
+    @Override
+    protected boolean autoHide() {
+        return false;
+    }
+
+    //temporarily reveal zones targeted by active stack instance
+    private void revealTargetZones() {
+        if (activeStackInstance == null) { return; }
+
+        final Set<ZoneType> zones = new HashSet<ZoneType>();
+        playersWithValidTargets = new HashMap<PlayerView, Object>();
+        for (final CardView c : activeStackInstance.getTargetCards()) {
+            if (c.getZone() != null) {
+                zones.add(c.getZone());
+                playersWithValidTargets.put(c.getController(), c);
+            }
+        }
+        if (zones.isEmpty() || playersWithValidTargets.isEmpty()) { return; }
+        MatchController.instance.openZones(zones, playersWithValidTargets);
+    }
+
+    //restore old zones when active stack instance changes
+    private void restoreOldZones() {
+        if (playersWithValidTargets == null) { return; }
+        MatchController.instance.restoreOldZones(playersWithValidTargets);
+        playersWithValidTargets = null;
+    }
+
+    @Override
+    public void update() {
+        activeItem = null;
+        activeStackInstance = null; //reset before updating stack
+        restoreOldZones();
+
+        final FCollectionView<StackItemView> stack = MatchUtil.getGameView().getStack();
+        if (stackSize != stack.size()) {
+            int oldStackSize = stackSize;
+            stackSize = stack.size();
+            getMenuTab().setText("Stack (" + stackSize + ")");
+
+            if (stackSize > 0) {
+                if (!isVisible()) {
+                    if (stackSize > oldStackSize) { //don't re-show stack if user hid it and then resolved an item on the stack
+                        show();
+                    }
+                    return; //don't call super.update() either way since show handles this
+                }
+            }
+            else {
+                hide();
+                return; //super.update() isn't needed if hidden
+            }
+        }
+        super.update();
+    }
+
+    @Override
+    protected ScrollBounds updateAndGetPaneSize(float maxWidth, float maxVisibleHeight) {
+        clear();
+
+        float x = MARGINS;
+        float y = MARGINS;
+        float totalWidth = maxWidth - MatchController.getView().getTopPlayerPanel().getTabs().iterator().next().getRight(); //keep avatar, life total, and hand tab visible to left of stack
+        float width = totalWidth - 2 * MARGINS;
+
+        final FCollectionView<StackItemView> stack = MatchUtil.getGameView().getStack();
+        if (stack.isEmpty()) { //show label if stack empty
+            FLabel label = add(new FLabel.Builder().text("[Empty]").font(FONT).align(HAlignment.CENTER).build());
+
+            float height = Math.round(label.getAutoSizeBounds().height) + 2 * PADDING;
+            label.setBounds(x, y, width, height);
+            return new ScrollBounds(totalWidth, y + height + MARGINS);
+        }
+        else {
+            //iterate stack in reverse so most recent items appear on bottom
+            StackItemView stackInstance = null;
+            StackInstanceDisplay display = null;
+            float overlap = Math.round(CARD_HEIGHT / 2 + PADDING + BORDER_THICKNESS);
+            for (int i = stack.size() - 1; i >= 0; i--) {
+                stackInstance = stack.get(i);
+                display = new StackInstanceDisplay(stackInstance, width);
+                if (activeStackInstance == stackInstance) {
+                    activeItem = display;
+                }
+                else { //only add non-active items here
+                    add(display);
+                }
+                //use full preferred height of display for topmost item on stack, overlap amount for other items
+                display.setBounds(x, y, width, i > 0 ? overlap : display.preferredHeight);
+                y += display.getHeight();
+            }
+            if (activeStackInstance == null) {
+                activeStackInstance = stackInstance; //use topmost item on stack as default active item
+                activeItem = display;
+            }
+            else {
+                activeItem.setHeight(display.preferredHeight); //increase active item height to preferred height if needed
+                if (activeItem.getBottom() > y) {
+                    y = activeItem.getBottom(); //ensure stack height increases if needed
+                }
+                add(activeItem);
+            }
+            scrollIntoView(activeItem); //scroll active display into view
+            revealTargetZones();
+        }
+        return new ScrollBounds(totalWidth, y + MARGINS);
+    }
+
+    protected void updateSizeAndPosition() {
+        if (!getRotate90()) {
+            super.updateSizeAndPosition();
+            return;
+        }
+        
+        FMenuTab menuTab = getMenuTab();
+        float screenHeight = Forge.getCurrentScreen().getHeight();
+        float width = (screenHeight - 2 * VPrompt.HEIGHT - 2 * VAvatar.HEIGHT) * 4f / 6f;
+        float maxVisibleHeight = menuTab.screenPos.x;
+        paneSize = updateAndGetPaneSize(width + MatchController.getView().getTopPlayerPanel().getTabs().iterator().next().getRight(), maxVisibleHeight);
+
+        //round width and height so borders appear properly
+        paneSize = new ScrollBounds(Math.round(paneSize.getWidth()), Math.round(paneSize.getHeight()));
+
+        setBounds(Math.round(menuTab.screenPos.x - width), Math.round((screenHeight + width) / 2), paneSize.getWidth(), Math.min(paneSize.getHeight(), maxVisibleHeight));
+    }
+
+    @Override
+    protected void setScrollPositionsAfterLayout(float scrollLeft0, float scrollTop0) {
+        super.setScrollPositionsAfterLayout(0, 0); //always scroll to top after layout
+    }
+
+    @Override
+    protected void drawOnContainer(Graphics g) {
+        //draw target arrows immediately above stack for active item only
+        if (activeItem != null) {
+            Vector2 arrowOrigin = new Vector2(
+                    activeItem.getLeft() + VStack.CARD_WIDTH * FCardPanel.TARGET_ORIGIN_FACTOR_X + VStack.PADDING + VStack.BORDER_THICKNESS,
+                    activeItem.getTop() + VStack.CARD_HEIGHT * FCardPanel.TARGET_ORIGIN_FACTOR_Y + VStack.PADDING + VStack.BORDER_THICKNESS);
+
+            PlayerView activator = activeStackInstance.getActivatingPlayer();
+            arrowOrigin = arrowOrigin.add(screenPos.x, screenPos.y);
+
+            StackItemView instance = activeStackInstance;
+            while (instance != null) {
+                for (CardView c : instance.getTargetCards()) {
+                    TargetingOverlay.drawArrow(g, arrowOrigin, c, activator.isOpponentOf(c.getController()));
+                }
+                for (PlayerView p : instance.getTargetPlayers()) {
+                    TargetingOverlay.drawArrow(g, arrowOrigin, p, activator.isOpponentOf(p));
+                }
+                instance = instance.getSubInstance();
+            }
+        }
+    }
+
+    private class StackInstanceDisplay extends FDisplayObject {
+        private final StackItemView stackInstance;
+        private final Color foreColor, backColor;
+        private String text;
+        private float preferredHeight;
+
+        private StackInstanceDisplay(StackItemView stackInstance0, float width) {
+            stackInstance = stackInstance0;
+            CardView card = stackInstance.getSourceCard();
+
+            text = stackInstance.getText();
+            if (stackInstance.isOptionalTrigger() &&
+                    stackInstance0.getActivatingPlayer().equals(MatchUtil.getCurrentPlayer())) {
+                text = "(OPTIONAL) " + text;
+            }
+
+            DetailColors color = CardDetailUtil.getBorderColor(card.getCurrentState(), true);
+            backColor = FSkinColor.fromRGB(color.r, color.g, color.b);
+            foreColor = FSkinColor.getHighContrastColor(backColor);
+
+            width -= CARD_WIDTH; //account for card picture
+            width -= 3 * PADDING + 2 * BORDER_THICKNESS; //account for left and right insets and gap between picture and text
+            float height = Math.max(CARD_HEIGHT, textRenderer.getWrappedBounds(text, FONT, width).height);
+            height += 2 * (PADDING + BORDER_THICKNESS);
+            preferredHeight = Math.round(height);
+        }
+
+        @Override
+        public boolean tap(float x, float y, int count) {
+            if (activeStackInstance != stackInstance) { //set as active stack instance if not already such
+                activeStackInstance = stackInstance;
+                restoreOldZones(); //restore old zones before changing active stack instance
+                VStack.this.updateSizeAndPosition();
+                return true;
+            }
+            final Player player = MatchUtil.getCurrentPlayer();
+            if (player != null) { //don't show menu if tapping on art
+                if (stackInstance.isAbility()) {
+                    FPopupMenu menu = new FPopupMenu() {
+                        @Override
+                        protected void buildMenu() {
+                            final PlayerControllerHuman humanController = MatchUtil.getHumanController();
+                            final PlayerView playerView = PlayerView.get(player);
+                            final String key = stackInstance.getKey();
+                            final boolean autoYield = humanController.shouldAutoYield(key);
+                            addItem(new FCheckBoxMenuItem("Auto-Yield", autoYield,
+                                    new FEventHandler() {
+                                @Override
+                                public void handleEvent(FEvent e) {
+                                    humanController.setShouldAutoYield(key, !autoYield);
+                                    if (!autoYield && stackInstance.equals(MatchUtil.getGameView().peekStack())) {
+                                        //auto-pass priority if ability is on top of stack
+                                        humanController.passPriority();
+                                    }
+                                }
+                            }));
+                            if (stackInstance.isOptionalTrigger() && stackInstance.getActivatingPlayer().equals(playerView)) {
+                                final int triggerID = stackInstance.getSourceTrigger();
+                                addItem(new FCheckBoxMenuItem("Always Yes",
+                                        humanController.shouldAlwaysAcceptTrigger(triggerID),
+                                        new FEventHandler() {
+                                    @Override
+                                    public void handleEvent(FEvent e) {
+                                        if (humanController.shouldAlwaysAcceptTrigger(triggerID)) {
+                                            humanController.setShouldAlwaysAskTrigger(triggerID);
+                                        }
+                                        else {
+                                            humanController.setShouldAlwaysAcceptTrigger(triggerID);
+                                            if (stackInstance.equals(MatchUtil.getGameView().peekStack())) {
+                                                //auto-yes if ability is on top of stack
+                                                humanController.confirm();
+                                            }
+                                        }
+                                    }
+                                }));
+                                addItem(new FCheckBoxMenuItem("Always No",
+                                        humanController.shouldAlwaysDeclineTrigger(triggerID),
+                                        new FEventHandler() {
+                                    @Override
+                                    public void handleEvent(FEvent e) {
+                                        if (humanController.shouldAlwaysDeclineTrigger(triggerID)) {
+                                            humanController.setShouldAlwaysAskTrigger(triggerID);
+                                        }
+                                        else {
+                                            humanController.setShouldAlwaysDeclineTrigger(triggerID);
+                                            if (stackInstance.equals(MatchUtil.getGameView().peekStack())) {
+                                                //auto-no if ability is on top of stack
+                                                humanController.confirm();
+                                            }
+                                        }
+                                    }
+                                }));
+                            }
+                            addItem(new FMenuItem("Zoom/Details", new FEventHandler() {
+                                @Override
+                                public void handleEvent(FEvent e) {
+                                    CardZoom.show(stackInstance.getSourceCard());
+                                }
+                            }));
+                        };
+                    };
+
+                    menu.show(this, x, y);
+                    return true;
+                }
+            }
+            CardZoom.show(stackInstance.getSourceCard());
+            return true;
+        }
+
+        @Override
+        public boolean longPress(float x, float y) {
+            CardZoom.show(stackInstance.getSourceCard());
+            return true;
+        }
+
+        @Override
+        public void draw(Graphics g) {
+            float x = 0;
+            float y = 0;
+            float w = getWidth();
+            float h = preferredHeight;
+
+            boolean needAlpha = (activeStackInstance != stackInstance);
+            if (needAlpha) { //use alpha for non-active items on stack
+                g.setAlphaComposite(ALPHA_COMPOSITE);
+            }
+
+            g.startClip(0, 0, w, getHeight()); //clip based on actual height
+
+            g.fillRect(Color.BLACK, x, y, w, h); //draw rectangle for border
+
+            x += BORDER_THICKNESS;
+            y += BORDER_THICKNESS;
+            w -= 2 * BORDER_THICKNESS;
+            h -= 2 * BORDER_THICKNESS;
+            g.fillRect(backColor, x, y, w, h);
+
+            x += PADDING;
+            y += PADDING;
+            CardRenderer.drawCardWithOverlays(g, stackInstance.getSourceCard(), x, y, CARD_WIDTH, CARD_HEIGHT, CardStackPosition.Top);
+
+            x += CARD_WIDTH + PADDING;
+            w -= x + PADDING - BORDER_THICKNESS;
+            h -= y + PADDING - BORDER_THICKNESS;
+            textRenderer.drawText(g, text, FONT, foreColor, x, y, w, h, y, h, true, HAlignment.LEFT, true);
+
+            g.endClip();
+
+            if (needAlpha) {
+                g.resetAlphaComposite();
+            }
+        }
+    }
+}

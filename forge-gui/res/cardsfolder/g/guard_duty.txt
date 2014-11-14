@@ -1,0 +1,8 @@
+Name:Guard Duty
+ManaCost:W
+Types:Enchantment Aura
+K:Enchant creature
+A:SP$ Attach | Cost$ W | ValidTgts$ Creature | AILogic$ Curse
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ Defender | Description$ Enchanted creature has defender.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/guard_duty.jpg
+Oracle:Enchant creature\nEnchanted creature has defender.

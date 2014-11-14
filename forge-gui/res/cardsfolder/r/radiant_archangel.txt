@@ -1,0 +1,11 @@
+Name:Radiant, Archangel
+ManaCost:3 W W
+Types:Legendary Creature Angel
+PT:3/3
+K:Flying
+K:Vigilance
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | References$ X | Description$ CARDNAME gets +1/+1 for each other creature with flying on the battlefield.
+SVar:X:Count$Valid Creature.Other+withFlying
+SVar:BuffedBy:Creature.withFlying
+SVar:Picture:http://resources.wizards.com/magic/cards/gu/en-us/card12368.jpg
+Oracle:Flying, vigilance\nRadiant, Archangel gets +1/+1 for each other creature with flying on the battlefield.

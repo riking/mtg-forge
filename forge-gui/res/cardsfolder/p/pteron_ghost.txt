@@ -1,0 +1,9 @@
+Name:Pteron Ghost
+ManaCost:1 W
+Types:Creature Spirit
+PT:1/1
+K:Flying
+A:AB$ Regenerate | Cost$ Sac<1/CARDNAME> | ValidTgts$ Artifact | TgtPrompt$ Select target artifact. | SpellDescription$ Regenerate target artifact.
+SVar:RemAIDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/pteron_ghost.jpg
+Oracle:Flying\nSacrifice Pteron Ghost: Regenerate target artifact.

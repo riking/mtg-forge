@@ -1,0 +1,7 @@
+Name:Sokenzan Bruiser
+ManaCost:4 R
+Types:Creature Ogre Warrior
+PT:3/3
+K:Mountainwalk
+SVar:Picture:http://resources.wizards.com/magic/cards/chk/en-us/card79140.jpg
+Oracle:Mountainwalk

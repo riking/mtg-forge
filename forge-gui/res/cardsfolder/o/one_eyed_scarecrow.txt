@@ -1,0 +1,8 @@
+Name:One-Eyed Scarecrow
+ManaCost:3
+Types:Artifact Creature Scarecrow
+PT:2/3
+K:Defender
+S:Mode$ Continuous | Affected$ Creature.withFlying+OppCtrl | AddPower$ -1 | AddToughness$ 0 | Description$ Creatures with flying your opponents control get -1/-0.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/one_eyed_scarecrow.jpg
+Oracle:Defender\nCreatures with flying your opponents control get -1/-0.

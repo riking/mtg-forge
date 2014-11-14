@@ -1,0 +1,23 @@
+Name:Initiate of Blood
+ManaCost:3 R
+Types:Creature Ogre Shaman
+PT:2/2
+A:AB$DealDamage | Cost$ T | ValidTgts$ Creature.wasDealtDamageThisTurn | TgtPrompt$ Select target creature that was dealt damage this turn. | NumDmg$ 1 | RememberTargets$ True | SpellDescription$ CARDNAME deals 1 damage to target creature that was dealt damage this turn. When that creature dies this turn, flip CARDNAME.
+T:Mode$ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.IsRemembered | Execute$ TrigFlip | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ When that creature dies this turn, flip CARDNAME.
+SVar:TrigFlip:AB$SetState | Cost$ 0 | Defined$ Self | Mode$ Flip | SubAbility$ TrigCleanup
+T:Mode$Phase | Phase$ End of Turn | Static$ True | Execute$ TrigCleanup | Secondary$ True | TriggerDescription$ Forgets remembered cards at eot.
+SVar:TrigCleanup:DB$Cleanup | ClearRemembered$ True
+AlternateMode:Flip
+SVar:Picture:http://www.wizards.com/global/images/magic/general/initiate_of_blood.jpg
+Oracle:{T}: Initiate of Blood deals 1 damage to target creature that was dealt damage this turn. When that creature dies this turn, flip Initiate of Blood.
+
+ALTERNATE
+
+Name:Goka the Unjust
+ManaCost:3 R
+Colors:red
+Types:Legendary Creature Ogre Shaman
+PT:4/4
+A:AB$DealDamage | Cost$ T | ValidTgts$ Creature.wasDealtDamageThisTurn | TgtPrompt$ Select target creature that was dealt damage this turn. | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to target creature that was dealt damage this turn.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/goka_the_unjust.jpg
+Oracle:{T}: Goka the Unjust deals 4 damage to target creature that was dealt damage this turn.

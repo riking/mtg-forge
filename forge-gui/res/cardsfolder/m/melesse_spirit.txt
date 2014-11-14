@@ -1,0 +1,8 @@
+Name:Melesse Spirit
+ManaCost:3 W W
+Types:Creature Angel Spirit
+PT:3/3
+K:Flying
+K:Protection from black
+SVar:Picture:http://www.wizards.com/global/images/magic/general/melesse_spirit.jpg
+Oracle:Flying, protection from black

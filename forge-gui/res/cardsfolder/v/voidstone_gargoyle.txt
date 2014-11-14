@@ -1,0 +1,12 @@
+Name:Voidstone Gargoyle
+ManaCost:3 W W
+Types:Creature Gargoyle
+PT:3/3
+K:Flying
+K:ETBReplacement:Other:DBNameCard
+SVar:DBNameCard:DB$ NameCard | Defined$ You | ValidCards$ Card.nonLand | ValidDesc$ nonland | SpellDescription$ As CARDNAME enters the battlefield, name a nonland card.
+S:Mode$ CantBeCast | ValidCard$ Card.NamedCard | Description$ The named card can't be cast.
+S:Mode$ CantBeActivated | ValidCard$ Card.NamedCard | Description$ Activated abilities of sources with the chosen name can't be activated.
+SVar:RemRandomDeck:True
+SVar:Picture:http://www.wizards.com/global/images/magic/general/voidstone_gargoyle.jpg
+Oracle:Flying\nAs Voidstone Gargoyle enters the battlefield, name a nonland card.\nThe named card can't be cast.\nActivated abilities of sources with the chosen name can't be activated.

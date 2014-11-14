@@ -1,0 +1,8 @@
+Name:Moltensteel Dragon
+ManaCost:4 PR PR
+Types:Artifact Creature Dragon
+PT:4/4
+K:Flying
+A:AB$ Pump | Cost$ PR | Defined$ Self | NumAtt$ 1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/moltensteel_dragon.jpg
+Oracle:({P/R} can be paid with either {R} or 2 life.)\nFlying\n{P/R}: Moltensteel Dragon gets +1/+0 until end of turn.

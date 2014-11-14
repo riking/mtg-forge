@@ -1,0 +1,364 @@
+[metadata]
+Code=C13
+Date=2013-11-01
+Name=Commander 2013
+Code2=C13
+Type=Other
+
+[cards]
+R Act of Authority
+U Aerie Mystics
+U Ajani's Pridemate
+R Angel of Finality
+U Archangel
+U Azorius Herald
+R Cradle of Vitality
+U Curse of the Forsaken
+U Darksteel Mutation
+R Eternal Dragon
+U Fiend Hunter
+R Flickerform
+U Flickerwisp
+R Karmic Guide
+R Kirtar's Wrath
+R Kongming, "Sleeping Dragon"
+R Mirror Entity
+R Mystic Barrier
+U Razor Hippogriff
+R Serene Master
+M Serra Avatar
+U Stonecloaker
+U Survival Cache
+R Tempt with Glory
+R Unexpectedly Absent
+R Wall of Reverence
+R Wrath of God
+C Arcane Denial
+R Arcane Melee
+U Augur of Bolas
+R Azami, Lady of Scrolls
+R Blue Sun's Zenith
+U Borrowing 100,000 Arrows
+U Brilliant Plan
+U Control Magic
+U Curse of Inertia
+U Deceiver Exarch
+C Deep Analysis
+U Dismiss
+U Diviner Spirit
+R Djinn of Infinite Deceits
+R Dungeon Geists
+R Echo Mage
+U Fog Bank
+U Guard Gomazoa
+U Hada Spy Patrol
+R Illusionist's Gambit
+R Jace's Archivist
+R Lu Xun, Scholar General
+C Mnemonic Wall
+U Opportunity
+R Order of Succession
+U Propaganda
+U Prosperity
+U Raven Familiar
+R Sharding Sphinx
+U Skyscribing
+U Stormscape Battlemage
+U Strategic Planning
+R Tempt with Reflections
+C Thornwind Faeries
+R Tidal Force
+R True-Name Nemesis
+R Uyo, Silent Prophet
+C Vision Skeins
+U Wash Out
+U Wonder
+U Annihilate
+M Army of the Damned
+R Baleful Force
+U Curse of Shallow Graves
+R Decree of Pain
+C Dirge of Dread
+U Disciple of Griselbrand
+R Endless Cockroaches
+R Endrek Sahr, Master Breeder
+U Famine
+R Fell Shepherd
+R Greed
+U Hooded Horror
+U Infest
+U Marrow Bats
+C Nightscape Familiar
+R Ophiomancer
+U Phthisis
+R Phyrexian Delver
+U Phyrexian Gargantua
+U Phyrexian Reclamation
+R Price of Knowledge
+C Quagmire Druid
+U Reckless Spite
+R Sanguine Bond
+R Stronghold Assassin
+R Sudden Spoiling
+R Tempt with Immortality
+R Toxic Deluge
+U Vampire Nighthawk
+U Vile Requiem
+C Viscera Seer
+U Wight of Precinct Six
+U Blood Rites
+R Capricious Efreet
+R Charmbreaker Devils
+R Crater Hellion
+U Curse of Chaos
+U Fireball
+C Fissure Vent
+R From the Ashes
+U Furnace Celebration
+U Goblin Bombardment
+R Goblin Sharpshooter
+U Guttersnipe
+R Incendiary Command
+M Inferno Titan
+R Magus of the Arena
+R Mass Mutiny
+R Molten Disaster
+U Rough // Tumble
+U Slice and Dice
+U Spitebellows
+R Stalking Vengeance
+R Starstorm
+U Street Spasm
+R Sudden Demise
+R Tempt with Vengeance
+U Terra Ravager
+R Tooth and Claw
+U War Cadence
+R Warstorm Surge
+R Where Ancients Tread
+R Widespread Panic
+R Wild Ricochet
+R Witch Hunt
+U Acidic Slime
+M Avenger of Zendikar
+U Baloth Woodcrasher
+R Bane of Progress
+R Brooding Saurian
+C Cultivate
+U Curse of Predation
+U Deadwood Treefolk
+U Drumhunter
+C Elvish Skysweeper
+C Farhaven Elf
+U Fecundity
+R Foster
+C Grazing Gladehart
+U Harmonize
+R Hua Tuo, Honored Physician
+R Hunted Troll
+U Jade Mage
+R Kazandu Tuskcaller
+U Krosan Grip
+C Krosan Tusker
+U Krosan Warchief
+C Mold Shambler
+R Naya Soulbeast
+C Night Soil
+U One Dozen Eyes
+R Phantom Nantuko
+C Presence of Gond
+R Primal Vigor
+U Rain of Thorns
+M Rampaging Baloths
+R Ravenous Baloth
+U Reincarnation
+U Restore
+C Sakura-Tribe Elder
+R Silklash Spider
+U Slice in Twain
+R Spawning Grounds
+U Spoils of Victory
+C Sprouting Vines
+R Tempt with Discovery
+U Walker of the Grove
+R AEthermage's Touch
+U Baleful Strix
+U Behemoth Sledge
+U Boros Charm
+R Charnelhoard Wurm
+U Crosis's Charm
+R Cruel Ultimatum
+R Death Grasp
+R Deathbringer Thoctar
+U Deepfire Elemental
+M Derevi, Empyrial Tactician
+U Dromar's Charm
+R Fiery Justice
+R Filigree Angel
+U Fires of Yavimaya
+M Gahiji, Honored One
+U Grixis Charm
+C Hull Breach
+M Jeleva, Nephalia's Scourge
+U Jund Charm
+U Leafdrake Roost
+U Lim-Dul's Vault
+M Marath, Will of the Wild
+M Mayael the Anima
+U Naya Charm
+M Nekusar, the Mindrazer
+U Nivix Guildmage
+M Oloro, Ageless Ascetic
+M Prossh, Skyraider of Kher
+C Rakeclaw Gargantuan
+M Roon of the Hidden Realm
+R Rubinia Soulsinger
+U Savage Twister
+U Scarland Thrinax
+R Sek'Kuar, Deathkeeper
+U Selesnya Charm
+M Sharuum the Hegemon
+M Shattergang Brothers
+U Skyward Eye Prophets
+C Soul Manipulation
+R Spellbreaker Behemoth
+M Sphinx of the Steel Wind
+R Spinal Embrace
+U Sprouting Thrinax
+M Sydri, Galvanic Genius
+M Thraximundar
+C Tidehollow Strix
+U Tower Gargoyle
+C Valley Rannet
+U Vizkopa Guildmage
+C Winged Coatl
+R Augury Adept
+R Divinity of Pride
+U Golgari Guildmage
+U Mistmeadow Witch
+R Murkfiend Liege
+U Selesnya Guildmage
+R Spiteful Visions
+U Thopter Foundry
+C Armillary Sphere
+U Azorius Keyrune
+U Basalt Monolith
+U Carnage Altar
+R Conjurer's Closet
+R Crawlspace
+U Darksteel Ingot
+R Druidic Satchel
+R Eye of Doom
+R Jar of Eyeballs
+U Leonin Bladetrap
+R Mirari
+R Myr Battlesphere
+R Nevinyrral's Disk
+C Nihil Spellbomb
+C Obelisk of Esper
+C Obelisk of Grixis
+C Obelisk of Jund
+C Pilgrim's Eye
+R Plague Boiler
+C Pristine Talisman
+R Seer's Sundial
+C Selesnya Signet
+C Simic Signet
+U Sol Ring
+R Spine of Ish Sah
+U Sun Droplet
+R Surveyor's Scope
+U Swiftfoot Boots
+R Sword of the Paruns
+R Temple Bell
+R Thousand-Year Elixir
+U Thunderstaff
+R Tower of Fortunes
+U Viseling
+C Wayfarer's Bauble
+R Well of Lost Dreams
+U Akoum Refuge
+U Arcane Sanctum
+C Azorius Chancery
+C Azorius Guildgate
+C Bant Panorama
+C Barren Moor
+C Bojuka Bog
+C Boros Garrison
+C Boros Guildgate
+C Command Tower
+R Contested Cliffs
+U Crumbling Necropolis
+C Dimir Guildgate
+C Drifting Meadow
+C Esper Panorama
+C Evolving Wilds
+U Faerie Conclave
+C Forgotten Cave
+C Golgari Guildgate
+C Golgari Rot Farm
+R Grim Backwoods
+C Grixis Panorama
+C Gruul Guildgate
+R Homeward Path
+C Izzet Boilerworks
+C Izzet Guildgate
+C Jund Panorama
+U Jungle Shrine
+U Jwar Isle Refuge
+U Kazandu Refuge
+C Khalni Garden
+R Kher Keep
+U Llanowar Reborn
+C Lonely Sandbar
+U Molten Slagheap
+R Mosswort Bridge
+C Naya Panorama
+U New Benalia
+C Opal Palace
+C Orzhov Basilica
+C Orzhov Guildgate
+C Rakdos Carnarium
+C Rakdos Guildgate
+C Rupture Spire
+U Saltcrusted Steppe
+U Savage Lands
+U Seaside Citadel
+C Secluded Steppe
+U Sejiri Refuge
+C Selesnya Guildgate
+C Selesnya Sanctuary
+C Simic Guildgate
+C Slippery Karst
+C Smoldering Crater
+R Springjack Pasture
+U Temple of the False God
+C Terramorphic Expanse
+C Tranquil Thicket
+C Transguild Promenade
+U Urza's Factory
+U Vitu-Ghazi, the City-Tree
+U Vivid Crag
+U Vivid Creek
+U Vivid Grove
+U Vivid Marsh
+L Plains
+L Plains
+L Plains
+L Plains
+L Island
+L Island
+L Island
+L Island
+L Swamp
+L Swamp
+L Swamp
+L Swamp
+L Mountain
+L Mountain
+L Mountain
+L Mountain
+L Forest
+L Forest
+L Forest
+L Forest

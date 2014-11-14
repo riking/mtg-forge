@@ -1,0 +1,8 @@
+Name:Archweaver
+ManaCost:5 G G
+Types:Creature Spider
+PT:5/5
+K:Reach
+K:Trample
+SVar:Picture:http://www.wizards.com/global/images/magic/general/archweaver.jpg
+Oracle:Reach, trample

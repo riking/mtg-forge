@@ -1,0 +1,7 @@
+Name:Sootwalkers
+ManaCost:2 BR BR
+Types:Creature Elemental Rogue
+PT:3/3
+K:CantBeBlockedBy Creature.White
+SVar:Picture:http://www.wizards.com/global/images/magic/general/sootwalkers.jpg
+Oracle:Sootwalkers can't be blocked by white creatures.

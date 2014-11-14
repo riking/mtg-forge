@@ -1,0 +1,7 @@
+Name:Fiery Hellhound
+ManaCost:1 R R
+Types:Creature Elemental Hound
+PT:2/2
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+SVar:Picture:http://www.wizards.com/global/images/magic/general/fiery_hellhound.jpg
+Oracle:{R}: Fiery Hellhound gets +1/+0 until end of turn.
